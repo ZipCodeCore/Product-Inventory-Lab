@@ -5,13 +5,13 @@ public class Sneaker {
     private String name;
     private String brand;
     private String sport;
-    private Integer size;
+    private Double size;
     private Integer quantity;
     private Float price;
 
     public Sneaker() {}
 
-    public Sneaker(Integer id, String name, String brand, String sport, Integer size, Integer quantity, Float price) {
+    public Sneaker(Integer id, String name, String brand, String sport, Double size, Integer quantity, Float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -53,11 +53,11 @@ public class Sneaker {
         this.sport = sport;
     }
 
-    public Integer getSize() {
+    public Double getSize() {
         return size;
     }
 
-    public void setSize(Integer size) {
+    public void setSize(Double size) {
         this.size = size;
     }
 
