@@ -7,3 +7,4 @@ In this is a multipart lab to be completed in order. We will be building a simpl
 Use the following links to complete this lab:
 
 * [Section 1](https://github.com/Zipcoder/Product-Inventory-Lab/blob/master/instructions/section-01.md)
+* [Section 2](https://github.com/Zipcoder/Product-Inventory-Lab/blob/master/instructions/section-02.md)
