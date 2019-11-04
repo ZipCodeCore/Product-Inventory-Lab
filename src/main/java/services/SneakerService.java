@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class SneakerService {
     private static int nextId = 1;
 
-    private ArrayList<Sneaker> inventory = new ArrayList<Sneaker>();
+    private ArrayList<Sneaker> inventory = new ArrayList<>();
 
     public Sneaker create(String name, String brand, String sport, Double size, Integer quantity, Float price) {
         Sneaker createdSneaker = new Sneaker(nextId++, name, brand, sport, size, quantity, price);
@@ -23,8 +23,12 @@ public class SneakerService {
     //read all
     public Sneaker[] findAll() {
         // should return a basic array copy of the ArrayList
-        //TODO fix cast to Object[]
-        return (Sneaker[]) inventory.toArray();
+        Integer len = inventory.size();
+        Sneaker[] sneaks = new Sneaker[len];
+        for (int i = 0; i < len; i++) {
+            sneaks[i] = inventory.get(i);
+        }
+        return sneaks;
     }
 
     //delete

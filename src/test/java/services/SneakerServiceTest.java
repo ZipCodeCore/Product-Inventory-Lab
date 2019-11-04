@@ -65,11 +65,28 @@ public class SneakerServiceTest {
             expected[i] = sneakerService.create("name"+i, "brand"+i, "sport"+i, 1.1, 34, 45.44f);
         }
         Sneaker[] actual = sneakerService.findAll();
-        Assert.assertSame(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void deleteTest() {
-
+    public void deleteTest1() {
+        Sneaker[] expected = new Sneaker[5];
+        SneakerService sneakerService = new SneakerService();
+        for (int i = 0; i < 5; i++) {
+            expected[i] = sneakerService.create("name"+i, "brand"+i, "sport"+i, 1.1, 34, 45.44f);
+        }
+        Boolean actual = sneakerService.delete(4);
+        Assert.assertTrue(actual);
+    }
+    @Test
+    public void deleteTest2() {
+        Sneaker[] expected = new Sneaker[5];
+        SneakerService sneakerService = new SneakerService();
+        for (int i = 0; i < 5; i++) {
+            expected[i] = sneakerService.create("name"+i, "brand"+i, "sport"+i, 1.1, 34, 45.44f);
+        }
+        sneakerService.delete(4);
+        Sneaker[] actual = sneakerService.findAll();
+        Assert.assertNotEquals(expected, actual);
     }
 }
