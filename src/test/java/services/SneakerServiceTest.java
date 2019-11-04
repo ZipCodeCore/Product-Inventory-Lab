@@ -2,7 +2,7 @@ package services;
 
 
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import models.Sneaker;
 
 public class SneakerServiceTest {
@@ -32,13 +32,13 @@ public class SneakerServiceTest {
         Float actualPrice = testSneaker.getPrice();
 
         // (4)
-        Assertions.assertEquals(Integer.class.getName(), new Integer(actualId).getClass().getName());
-        Assertions.assertEquals(expectedName, actualName);
-        Assertions.assertEquals(expectedBrand, actualBrand);
-        Assertions.assertEquals(expectedSport, actualSport);
-        Assertions.assertEquals(expectedSize, actualSize);
-        Assertions.assertEquals(expectedQty, actualQty);
-        Assertions.assertEquals(expectedPrice, actualPrice);
+        Assert.assertEquals(Integer.class.getName(), new Integer(actualId).getClass().getName());
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedBrand, actualBrand);
+        Assert.assertEquals(expectedSport, actualSport);
+        Assert.assertEquals(expectedSize, actualSize);
+        Assert.assertEquals(expectedQty, actualQty);
+        Assert.assertEquals(expectedPrice, actualPrice);
 
     }
 
