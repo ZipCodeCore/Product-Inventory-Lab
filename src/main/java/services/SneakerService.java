@@ -18,16 +18,19 @@ public class SneakerService {
     //read
     public Sneaker findSneaker(int id) {
         // should take an int and return an object with that id, if exists
+        return null;
     }
 
     //read all
     public Sneaker[] findAll() {
         // should return a basic array copy of the ArrayList
+        return null;
     }
 
     //delete
     public boolean delete(int id) {
         // should remove the object with this id from the ArrayList if exits and return true.
         // Otherwise return false
+        return null;
     }
 }
