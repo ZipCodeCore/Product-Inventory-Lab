@@ -1,9 +1,9 @@
 package services;
 
+import models.Sneaker;
 
 import org.junit.Test;
 import org.junit.Assert;
-import models.Sneaker;
 
 public class SneakerServiceTest {
     @Test

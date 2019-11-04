@@ -28,11 +28,6 @@ public class SneakerTest {
         Assert.assertEquals(expectedPrice, testSneaker.getPrice());
     }
 
-//    @Test
-//    public void getIdTest() {
-//
-//    }
-
     @Test
     public void setIdTest() {
         Integer expected = 78;
@@ -42,11 +37,6 @@ public class SneakerTest {
 
         Assert.assertEquals(expected, testSneaker.getId());
     }
-
-//    @Test
-//    public void getNameTest() {
-//
-//    }
 
     @Test
     public void setNameTest() {
@@ -58,11 +48,6 @@ public class SneakerTest {
         Assert.assertEquals(expected, testSneaker.getName());
     }
 
-//    @Test
-//    public void getBrandTest() {
-//
-//    }
-
     @Test
     public void setBrandTest() {
         String expected = "Nike";
@@ -72,11 +57,6 @@ public class SneakerTest {
 
         Assert.assertEquals(expected, testSneaker.getBrand());
     }
-
-//    @Test
-//    public void getSportTest() {
-//
-//    }
 
     @Test
     public void setSportTest() {
@@ -88,11 +68,6 @@ public class SneakerTest {
         Assert.assertEquals(expected, testSneaker.getSport());
     }
 
-//    @Test
-//    public void getSizeTest() {
-//
-//    }
-
     @Test
     public void setSizeTest() {
         Double expected = 12.5;
@@ -103,11 +78,6 @@ public class SneakerTest {
         Assert.assertEquals(expected, testSneaker.getSize());
     }
 
-//    @Test
-//    public void getQuantityTest() {
-//
-//    }
-
     @Test
     public void setQuantityTest() {
         Integer expected = 1300;
@@ -117,11 +87,6 @@ public class SneakerTest {
 
         Assert.assertEquals(expected, testSneaker.getQuantity());
     }
-
-//    @Test
-//    public void getPriceTest() {
-//
-//    }
 
     @Test
     public void setPriceTest() {
