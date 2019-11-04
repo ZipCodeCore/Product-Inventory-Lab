@@ -1,6 +1,7 @@
 package services;
 import models.Sneaker;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SneakerService {
     private static int nextId = 1;
@@ -16,19 +17,25 @@ public class SneakerService {
     //read
     public Sneaker findSneaker(int id) {
         // should take an int and return an object with that id, if exists
-        return inventory.get(id);
+        return inventory.get(id-1);
     }
 
     //read all
     public Sneaker[] findAll() {
         // should return a basic array copy of the ArrayList
-        return null;
+        //TODO fix cast to Object[]
+        return (Sneaker[]) inventory.toArray();
     }
 
     //delete
     public Boolean delete(int id) {
         // should remove the object with this id from the ArrayList if exits and return true.
         // Otherwise return false
-        return null;
+        Boolean outcome = false;
+        if (id <= inventory.size()) {
+            inventory.remove(id);
+            outcome = true;
+        }
+        return outcome;
     }
 }

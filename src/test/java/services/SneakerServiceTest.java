@@ -44,12 +44,28 @@ public class SneakerServiceTest {
 
     @Test
     public void findSneakerTest() {
-
+        SneakerService sneakerService = new SneakerService();
+        for (int i = 0; i < 5; i++) {
+            sneakerService.create("name"+i, "brand"+i, "sport"+i, 1.1, 34, 45.44f);
+        }
+        Sneaker actual = sneakerService.findSneaker(4);
+        Sneaker expected = new Sneaker(4, "name3", "brand3", "sport3", 1.1, 34, 45.44f);
+        Assert.assertEquals(expected.getId(), actual.getId());
+        Assert.assertEquals(expected.getName(), actual.getName());
+        Assert.assertEquals(expected.getBrand(), actual.getBrand());
+        Assert.assertEquals(expected.getQuantity(), actual.getQuantity());
+        Assert.assertEquals(expected.getPrice(), actual.getPrice());
     }
 
     @Test
     public void findAllTest() {
-
+        Sneaker[] expected = new Sneaker[5];
+        SneakerService sneakerService = new SneakerService();
+        for (int i = 0; i < 5; i++) {
+            expected[i] = sneakerService.create("name"+i, "brand"+i, "sport"+i, 1.1, 34, 45.44f);
+        }
+        Sneaker[] actual = sneakerService.findAll();
+        Assert.assertSame(expected, actual);
     }
 
     @Test
