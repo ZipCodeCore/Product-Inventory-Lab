@@ -1,7 +1,12 @@
 package services;
 
-import static org.junit.jupiter.api.Assertions.*;
+import models.Sneaker;
+
+import java.util.ArrayList;
+import java.util.List;
 
 class SneakerServicesTest {
+
+    List<Sneaker> sneakerList = new ArrayList<Sneaker>();
 
 }
