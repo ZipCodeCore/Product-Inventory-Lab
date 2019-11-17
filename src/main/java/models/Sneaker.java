@@ -76,4 +76,10 @@ public class Sneaker {
     public void setPrice(Float price) {
         this.price = price;
     }
+
+    public String toString() {
+        return String.format("\n%s %s %s %s %s %s %s", getId(),
+                getBrand(), getName(), getSport(),
+                getSize(), getQuantity(), getPrice());
+    }
 }

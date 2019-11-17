@@ -14,6 +14,10 @@ public class SneakerService {
         return createdSneaker;
     }
 
+    public Integer size() {
+        return inventory.size();
+    }
+
     //read
     public Sneaker findSneaker(int id) {
         // should take an int and return an object with that id, if exists
@@ -37,9 +41,28 @@ public class SneakerService {
         // Otherwise return false
         Boolean outcome = false;
         if (id <= inventory.size()) {
-            inventory.remove(id);
+            inventory.remove(id-1);
             outcome = true;
         }
         return outcome;
+    }
+
+    public String toString() {
+        StringBuilder out = new StringBuilder();
+        out.append("Sneaker Inventory:\n" +
+                "Id Brand Name Sport Size Qty Price");
+        for (Sneaker sneaker : inventory) {
+            out.append(sneaker.toString());
+        }
+        return out.toString();
+    }
+
+//    public void update(Integer id, String name, String brand, String sport, Double size, Integer quantity, Float price) {
+//        Sneaker updated = new Sneaker(id, name, brand, sport, size, quantity, price);
+//        inventory.set(id-1, updated);
+//    }
+
+    public void update(Integer id, Sneaker updated) {
+        inventory.set(id-1, updated);
     }
 }
