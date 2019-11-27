@@ -64,7 +64,7 @@ public class Sneaker {
         this.sport = sport;
     }
 
-    public void setSize(int size) {
+    public void setSize(float size) {
         this.size = size;
     }
 
@@ -74,5 +74,18 @@ public class Sneaker {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Sneaker{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", sport='" + sport + '\'' +
+                ", size=" + size +
+                ", qty=" + qty +
+                ", price=" + price +
+                '}';
     }
 }
