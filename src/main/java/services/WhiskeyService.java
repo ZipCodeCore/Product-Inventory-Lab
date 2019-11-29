@@ -16,6 +16,6 @@ public class WhiskeyService {
         return whiskey;
     }
     public Whiskey findAll(){
-        Whiskey
+        return null;
     }
 }
