@@ -7,6 +7,11 @@ import java.util.List;
 
 public class SneakerService {
     private static int nextId = 1;
+
+    public static void setNextId(int nextId) {
+        SneakerService.nextId = nextId;
+    }
+
     private ArrayList<Sneaker> inventory = new ArrayList<>();
 
     public Sneaker create(String name, String brand, String sport, float size, int quantity, float price) {
@@ -40,5 +45,7 @@ public class SneakerService {
         }
         return false;
     }
+
+
 
 }
