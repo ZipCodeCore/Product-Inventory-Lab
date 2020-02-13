@@ -1,18 +1,27 @@
 package Models;
 
 public class TradingCards {
+    private int id;
     private  String game;
     private int rarity;
     private boolean isFromStartedDeck;
     private double price;
 
-    public TradingCards(String game, int rarity, boolean isFromStartedDeck, double price){
+    public TradingCards(int id, String game, int rarity, boolean isFromStartedDeck, double price){
+        this.id = id;
         this.game = game;
         this.rarity = rarity;
         this.isFromStartedDeck = isFromStartedDeck;
         this.price = price;
     }
 
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
+    }
     public void setGame(String game) {
         this.game = game;
     }

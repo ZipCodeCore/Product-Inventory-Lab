@@ -20,15 +20,16 @@ public class TradingCardTest {
 //    }
     @Test // (1)
     public void constructorTest(){
+        int exid = 5;
           String exgame = "DnD";
          int exrarity = 6;
          boolean exisFromStartedDeck = false;
          double exprice = 15.00;
 
-        TradingCards testCard = new TradingCards(exgame, exrarity, exisFromStartedDeck,
+        TradingCards testCard = new TradingCards(exid, exgame, exrarity, exisFromStartedDeck,
                 exprice);
 
-
+        Assertions.assertEquals(exid, testCard.getId());
         Assertions.assertEquals(exgame, testCard.getGame());
         Assertions.assertEquals(exrarity, testCard.getRarity());
         Assertions.assertEquals(exisFromStartedDeck, testCard.getFromStarterDeck());
