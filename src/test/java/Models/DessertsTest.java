@@ -20,15 +20,16 @@ public class DessertsTest {
 //    }
 @Test // (1)
 public void constructorTest(){
+    int exid = 6;
     String exname = "icecream";
     double exprice = 4.00;
     boolean exservedCold = true;
     boolean excurrentlyOnMenu = false;
 
-    Desserts testDessert = new Desserts(exname, exprice, exservedCold,
+    Desserts testDessert = new Desserts(exid, exname, exprice, exservedCold,
             excurrentlyOnMenu);
 
-
+    Assertions.assertEquals(exid, testDessert.getId());
     Assertions.assertEquals(exname, testDessert.getName());
     Assertions.assertEquals(exprice, testDessert.getPrice());
     Assertions.assertEquals(exservedCold, testDessert.getServedCold());
