@@ -7,6 +7,10 @@ public class TradingCards {
     private boolean isFromStartedDeck;
     private double price;
 
+    public TradingCards(){
+
+    }
+
     public TradingCards(int id, String game, int rarity, boolean isFromStartedDeck, double price){
         this.id = id;
         this.game = game;

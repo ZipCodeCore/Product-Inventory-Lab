@@ -1,18 +1,25 @@
 package Models;
 
 public class Desserts {
+
+
+
     private int id;
     private String name;
     private double price;
-    private boolean servedCold;
-    private boolean currentlyOnMenu;
+    private int popularity;
+    private int numServes;
 
-    public Desserts(int id, String name, double price, boolean servedCold, boolean currentlyOnMenu){
+    public Desserts(){
+
+    }
+
+    public Desserts(int id, String name, double price, int popularity, int numServes){
         this.id = id;
         this.name = name;
         this.price = price;
-        this.servedCold = servedCold;
-        this.currentlyOnMenu = currentlyOnMenu;
+        this.popularity = popularity;
+        this.numServes = numServes;
 
     }
     public void setId(int id) {
@@ -34,17 +41,17 @@ public class Desserts {
         return price;
     }
 
-    public void setServedCold(boolean servedCold) {
-        this.servedCold = servedCold;
+    public void setpopularity(int popularity) {
+        this.popularity = popularity;
     }
-    public boolean getServedCold() {
-        return servedCold;
+    public int getpopularity() {
+        return popularity;
     }
 
-    public void setcurrentlyOnMenu(boolean currentlyOnMenu) {
-        this.currentlyOnMenu = currentlyOnMenu;
+    public void setnumServes(int numServes) {
+        this.numServes = numServes;
     }
-    public boolean getcurrentlyOnMenu() {
-        return currentlyOnMenu;
+    public int getnumServes() {
+        return numServes;
     }
 }
