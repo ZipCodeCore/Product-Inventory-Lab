@@ -1,13 +1,30 @@
 package models;
 
 public class TVs {
-    public class Sneaker {
 
-        private int id;
-        private String name;
-        private String brand;
-        private int size;
-        private int qty;
-        private float price;
+    private  String name;
+    private int size;
+    private float price;
+
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setSize(int size) {this.size = size;}
+
+    public int getSize() {return size;}
+
+    public void setPrice(float price) {this.price = price;}
+
+    public float getPrice() {return price;}
+
+
+
 }
+
+
+

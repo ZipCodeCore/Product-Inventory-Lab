@@ -2,11 +2,34 @@ package models;
 
 public class Shoes {
 
-        private int id;
-        private String name;
-        private String brand;
+        private  String name;
         private int size;
-        private int qty;
         private float price;
-    }
+
+        public void setName(String name) {
+                this.name = name;
+        }
+
+        public String getName() {
+                return name;
+        }
+
+        public void setSize(int size) {
+                this.size = size;
+        }
+
+        public int getSize() {
+                return size;
+        }
+
+        public void setPrice(float price) {
+                this.price = price;
+        }
+
+        public float getPrice() {
+                return price;
+        }
+}
+
+
 
