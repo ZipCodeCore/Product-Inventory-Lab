@@ -12,7 +12,8 @@ public class ShoesTest {
         String expected = "NIKE";
 
         // when (2)
-        Shoes testName = new Shoes();
+        Shoes testName = new Shoes(); //need this Shoes class a.public Shoes() {
+        //this.name = "NIKE"; this.quantity = 1000; this.price = 20.00;}
         testName.setName(expected);
 
         // then (3)
@@ -46,7 +47,7 @@ public class ShoesTest {
         Assertions.assertEquals(expected, testPrice.getPrice());
 
     }
-    //d.
+    //d. need this for constructor
     @Test
     public void testDefaultConstructor() {
         //Given

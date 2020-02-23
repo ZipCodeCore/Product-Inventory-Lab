@@ -34,7 +34,7 @@ public class Shoes {
         public double getPrice() {
                 return price;
         }
-        //d.
+        //d.need this for constructor
         public Shoes(String name, int quantity, double price) {
                 this.name = name;
                 this.quantity = quantity;

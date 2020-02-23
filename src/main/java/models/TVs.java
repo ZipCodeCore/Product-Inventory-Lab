@@ -6,6 +6,12 @@ public class TVs {
     private int quantity;
     private Double price;
 
+    //a.need this for testing individual and combined
+    public TVs () {
+        this.name = "Samsung";
+        this.quantity = 500;
+        this.price = 29.99;
+    }
     public void setName(String name) {
         this.name = name;
     }
@@ -22,6 +28,12 @@ public class TVs {
 
     public Double getPrice() {return price;}
 
+    //d. need this for constructor
+    public TVs(String name, int quantity, double price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
 
 
 }
