@@ -3,8 +3,8 @@ package models;
 public class Shoes {
 
         private  String name;
-        private int size;
-        private float price;
+        private int quantity;
+        private Double price;
 
         public void setName(String name) {
                 this.name = name;
@@ -14,19 +14,19 @@ public class Shoes {
                 return name;
         }
 
-        public void setSize(int size) {
-                this.size = size;
+        public void setQuantity(int quantity) {
+                this.quantity = quantity;
         }
 
-        public int getSize() {
-                return size;
+        public int getQuantity() {
+                return quantity;
         }
 
-        public void setPrice(float price) {
+        public void setPrice(Double price) {
                 this.price = price;
         }
 
-        public float getPrice() {
+        public Double getPrice() {
                 return price;
         }
 }

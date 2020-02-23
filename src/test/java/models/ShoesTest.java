@@ -17,6 +17,34 @@ public class ShoesTest {
         // then (3)
         Assertions.assertEquals(expected, testName.getName());
     }
+    @Test
+    public void setQuantityTest() {
+        //given
+        int expected = 1000;
+
+        // when
+        Shoes testQuantity = new Shoes();
+        testQuantity.setQuantity(expected);
+
+        // then
+        Assertions.assertEquals(expected, testQuantity.getQuantity());
+
+
+    }
+    @Test
+    public void setPrice() {
+        //given
+        Double expected = 20.99;
+
+        //when
+        Shoes testPrice = new Shoes();
+        testPrice.setPrice(expected);
+
+        //then
+        Assertions.assertEquals(expected, testPrice.getPrice());
+
+
+    }
 }
 
 
