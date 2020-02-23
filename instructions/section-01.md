@@ -197,8 +197,9 @@ src/main
 │   └── services
 │       ├── SneakerService.java
 │       └── WhiskeyService.java
-└── resources
-```
+└── resource
+s
+
 Because our store is so successful, we are really moving through inventory. So I would be nice to have a class that would help maintain all the items. A class that provided the service of creating and managing the items. For my example I will create a "SneakerService" class and a "WhiskeyService" class inside the services package.
 
 Because we are Doing Test Driven Development (TDD) we need to also have test classes for the models and the services.

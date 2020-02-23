@@ -26,7 +26,7 @@ A sneaker item from inventory
 - size: float
 - qty: int
 - price: float
-
+f
 
 These will be enough properties for now. If I ever need to add or remove I can come back and make a change. 
 
