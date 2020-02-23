@@ -3,8 +3,8 @@ package models;
 public class TVs {
 
     private  String name;
-    private int size;
-    private float price;
+    private int quantity;
+    private Double price;
 
     public void setName(String name) {
         this.name = name;
@@ -14,13 +14,13 @@ public class TVs {
         return name;
     }
 
-    public void setSize(int size) {this.size = size;}
+    public void setQuantity(int quantity) {this.quantity = quantity;}
 
-    public int getSize() {return size;}
+    public int getQuantity() {return quantity;}
 
-    public void setPrice(float price) {this.price = price;}
+    public void setPrice(Double price) {this.price = price;}
 
-    public float getPrice() {return price;}
+    public Double getPrice() {return price;}
 
 
 

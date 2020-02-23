@@ -17,6 +17,7 @@ public class ShoesTest {
         // then (3)
         Assertions.assertEquals(expected, testName.getName());
     }
+
     @Test
     public void setQuantityTest() {
         //given
@@ -29,8 +30,8 @@ public class ShoesTest {
         // then
         Assertions.assertEquals(expected, testQuantity.getQuantity());
 
-
     }
+
     @Test
     public void setPrice() {
         //given
@@ -42,7 +43,6 @@ public class ShoesTest {
 
         //then
         Assertions.assertEquals(expected, testPrice.getPrice());
-
 
     }
 }
