@@ -4,8 +4,13 @@ public class Shoes {
 
         private  String name;
         private int quantity;
-        private Double price;
-
+        private double price;
+        //a.need this for testing individual setTests.
+        public Shoes () {
+                this.name = "NIKE";
+                this.quantity = 1000;
+                this.price = 20.00;
+        }
         public void setName(String name) {
                 this.name = name;
         }
@@ -22,13 +27,21 @@ public class Shoes {
                 return quantity;
         }
 
-        public void setPrice(Double price) {
+        public void setPrice(double price) {
                 this.price = price;
         }
 
-        public Double getPrice() {
+        public double getPrice() {
                 return price;
         }
+        //d.
+        public Shoes(String name, int quantity, double price) {
+                this.name = name;
+                this.quantity = quantity;
+                this.price = price;
+        }
+
+
 }
 
 

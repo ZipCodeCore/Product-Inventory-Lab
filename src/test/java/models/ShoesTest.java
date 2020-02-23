@@ -8,6 +8,7 @@ public class ShoesTest {
     @Test
     public void setNameTest() {
         // given (1)
+        Shoes shoe = new Shoes();
         String expected = "NIKE";
 
         // when (2)
@@ -35,7 +36,7 @@ public class ShoesTest {
     @Test
     public void setPrice() {
         //given
-        Double expected = 20.99;
+        double expected = 20.99;
 
         //when
         Shoes testPrice = new Shoes();
@@ -45,6 +46,29 @@ public class ShoesTest {
         Assertions.assertEquals(expected, testPrice.getPrice());
 
     }
+    //d.
+    @Test
+    public void testDefaultConstructor() {
+        //Given
+        String expectedName = "NIKE";
+        int expectedQuantity = 1000;
+        double expectedPrice = 20.99;
+
+        //When
+        Shoes shoes = new Shoes(expectedName, expectedQuantity, expectedPrice);
+
+        //Then
+        String actualName = shoes.getName();
+        int actualQuantity = shoes.getQuantity();
+        double actualPrice = shoes.getPrice();
+
+        Assertions.assertEquals(expectedName, actualName);
+        Assertions.assertEquals(expectedQuantity, actualQuantity);
+        Assertions.assertEquals(expectedPrice, actualPrice);
+    }
+
+
+
 }
 
 
