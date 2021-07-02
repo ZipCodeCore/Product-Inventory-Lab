@@ -6,7 +6,7 @@ public class Sneaker {
     private String brand;
     private String sport;
     private int size;
-    private int qyt;
+    private int quantity;
     private float price;
 
 }
