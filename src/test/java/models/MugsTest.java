@@ -3,6 +3,6 @@ package models;
 
 import org.junit.Test;
 
-class MugsTest {
+public class MugsTest {
 
 }
