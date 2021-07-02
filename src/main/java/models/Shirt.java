@@ -1,21 +1,21 @@
 package models;
 
-public class Sneaker {
-    private String name;
+public class Shirt {
+    private String shirtType;
     private String brand;
-    private String sport;
-    private int size;
+    private String material;
     private int quantity;
     private double price;
 
-    public Sneaker(){
+    public Shirt(){
     }
 
-    public void setName(String name){
-        this.name = name;
+    public void setShirtType(String type) {
+        this.shirtType = type;
     }
-    public String getName(){
-        return this.name;
+
+    public String getShirtType() {
+        return this.shirtType;
     }
 
     public void setBrand(String brand) {
@@ -26,20 +26,12 @@ public class Sneaker {
         return this.brand;
     }
 
-    public void setSport(String sport) {
-        this.sport = sport;
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
-    public String getSport() {
-        return this.sport;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public int getSize() {
-        return this.size;
+    public String getMaterial() {
+        return this.material;
     }
 
     public void setQuantity(int quantity) {
