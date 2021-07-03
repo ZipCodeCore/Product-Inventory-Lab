@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 
 public class Shirt {
+    private int id;
     private String shirtType;
     private String brand;
     private String material;
@@ -12,7 +13,8 @@ public class Shirt {
     public Shirt(){
     }
 
-    public Shirt(String shirtType, String brand, String material, int quantity, double price) {
+    public Shirt(int id, String shirtType, String brand, String material, int quantity, double price) {
+        this.id = id;
         this.shirtType = shirtType;
         this.brand = brand;
         this.material = material;
@@ -60,5 +62,11 @@ public class Shirt {
         return this.price;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public int getId() {
+        return this.id;
+    }
 }

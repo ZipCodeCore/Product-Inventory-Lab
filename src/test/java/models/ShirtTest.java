@@ -16,7 +16,7 @@ public class ShirtTest {
         //Then
         Assertions.assertEquals(expected, actual);
     }
-
+    @Test
     public void getBrandTest(){
         //Given
         String expected = "Gucci";
@@ -26,6 +26,7 @@ public class ShirtTest {
         //Then
         Assertions.assertEquals(expected, actual);
     }
+    @Test
     public void getMaterialTest(){
         //Given
         String expected = "Cotton";
@@ -35,6 +36,7 @@ public class ShirtTest {
         //Then
         Assertions.assertEquals(expected, actual);
     }
+    @Test
     public void getQuantityTest(){
         //Given
         int expected = 25;
@@ -44,6 +46,7 @@ public class ShirtTest {
         //Then
         Assertions.assertEquals(expected, actual, 0);
     }
+    @Test
     public void getPriceTest(){
         //Given
         double expected = 25.99;
@@ -53,17 +56,27 @@ public class ShirtTest {
         //Then
         Assertions.assertEquals(expected, actual);
     }
-
+    @Test
+    public void getIdTest(){
+        //Given
+        int expectedId = 1;
+        shirt.setId(expectedId);
+        //When
+        int actualId = shirt.getId();
+        //Then
+        Assertions.assertEquals(expectedId, actualId);
+    }
     @Test
     public void shirtConstructorTest(){
         //Given
+        int idExpected = 1;
         String shirtTypeExpected = "Crew Neck" ;
         String brandExpected = "Produce of the Factory";
         String materialExpected = "Cotton";
         int quantityExpected = 50;
         double priceExpected = 5.99;
         //When
-        Shirt testShirt = new Shirt(shirtTypeExpected, brandExpected, materialExpected, quantityExpected, priceExpected);
+        Shirt testShirt = new Shirt(idExpected, shirtTypeExpected, brandExpected, materialExpected, quantityExpected, priceExpected);
         //Then
         Assertions.assertEquals(shirtTypeExpected, testShirt.getShirtType());
         Assertions.assertEquals(brandExpected, testShirt.getBrand());
