@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DosaTest {
+class ChocolateTest {
 
     @BeforeEach
     void setUp() {
@@ -14,4 +14,6 @@ class DosaTest {
     @AfterEach
     void tearDown() {
     }
+
+
 }
