@@ -1,6 +1,5 @@
 package services;
 
-import com.sun.deploy.net.MessageHeader;
 import models.Sneaker;
 
 import java.util.ArrayList;
@@ -28,6 +27,10 @@ public class SneakerService {
             }
         }
         return null;
+    }
+
+    public Object[] findAll() {
+        return inventory.toArray();
     }
 
     //

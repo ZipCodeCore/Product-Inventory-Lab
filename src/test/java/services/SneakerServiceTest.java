@@ -4,6 +4,8 @@ import models.Sneaker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class SneakerServiceTest {
     @Test
     public void createTest(){
@@ -53,9 +55,9 @@ public class SneakerServiceTest {
         SneakerService newSneakerService = new SneakerService();
         Sneaker newSneaker = newSneakerService.create(expectedName, expectedBrand, expectedSport, expectedSize, expectedQty, expectedPrice);
         //3
-        Sneaker actualSneaker = newSneakerService.find(expectedID);
+
         //4
-        Assertions.assertEquals(expectedID,actualSneaker.getId());
+        Assertions.assertEquals(newSneaker,newSneakerService.find(expectedID));
     }
 
     /**
@@ -65,5 +67,35 @@ public class SneakerServiceTest {
      * }
      */
     @Test
-    
+    public void sneakerServiceFindAllTest() {
+        //1
+        int expectedID = 1;
+        String expectedName = "NitroBalance";
+        String expectedBrand = "Nike";
+        String expectedSport = "Basket Ball";
+        int expectedSize = 11;
+        int expectedQty = 10;
+        float expectedPrice = 75.00f;
+        //2
+        SneakerService newSneakerService = new SneakerService();
+        Sneaker newSneaker = newSneakerService.create(expectedName, expectedBrand, expectedSport, expectedSize, expectedQty, expectedPrice);
+        //3
+        Object[] actualSneakerArray = new Sneaker[1];
+        actualSneakerArray[0] = newSneaker;
+        //4
+        Assertions.assertEquals(true, Arrays.equals(actualSneakerArray,newSneakerService.findAll()));
+    }
+
+    /**
+     * //delete
+     * public boolean delete(int id) {
+     *     // should remove the object with this id from the ArrayList if exits and return true.
+     *     // Otherwise return false
+     * }
+     */
+    @Test
+    public void SneakerServiceDeleteTest(){
+
+    }
 }
+
