@@ -50,13 +50,13 @@ class ClothingServiceTest {
     void findClothing() {
         //Given
         ClothingService clothingService = new ClothingService();
-        Clothing foundClothing = new Clothing();
-        clothingService.create("Shirt","Arrow",32,10,30);
-        clothingService.create("Jeans","Levis",32,8,42);
+        Clothing clothing = new Clothing();
+        clothingService.create("Dress","Gucci",6,10,300);
+        clothingService.create("Jeans","Levis",10,8,45);
         //When
-        foundClothing = clothingService.findClothing(2);
+        clothing = clothingService.findClothing(2);
         //Then
-        Assertions.assertEquals("Levis",foundClothing.getBrand());
+        Assertions.assertEquals("Levis",clothing.getBrand());
 
     }
 

@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChocolateServiceTest {
@@ -48,14 +50,14 @@ class ChocolateServiceTest {
     void findChocolate() {
         //Given
         ChocolateService chocolateService = new ChocolateService();
-        Chocolate foundChocolate = new Chocolate();
+        Chocolate chocolate = new Chocolate();
         chocolateService.create("Munch","wafer",10,5);
         chocolateService.create("Kit kat","bar",20,10);
         //When
-        foundChocolate = chocolateService.findChocolate("Munch");
+        chocolate = chocolateService.findChocolate("Munch");
 
         //Then
-        Assertions.assertEquals("Munch", foundChocolate.getBrand());
+        Assertions.assertEquals("Munch", chocolate.getBrand());
 
     }
 
@@ -67,21 +69,22 @@ class ChocolateServiceTest {
         chocolateService.create("Munch","wafer",10,5);
         chocolateService.create("Kit kat","bar",20,10);
         //When
-        Chocolate [] chocolates = chocolateService.findAll();
+        Chocolate[] chocolates = chocolateService.findAll();
         //Then
-        Assertions.assertTrue(true);
+        Assertions.assertEquals(2,chocolates.length);
+        //Assertions.assertTrue(true);
     }
 
     @Test
     void delete() {
         //Given
         ChocolateService chocolateService = new ChocolateService();
-        Boolean isChocolateDeleted = true;
+        Boolean chocolateDeleted = true;
         chocolateService.create("Munch","wafer",10,5);
         chocolateService.create("Kit kat","bar",20,10);
         //When
-        isChocolateDeleted = chocolateService.delete("Munch");
+        chocolateDeleted = chocolateService.delete("Munch");
         //Then
-        Assertions.assertEquals(true, isChocolateDeleted);
+        Assertions.assertEquals(true, chocolateDeleted);
     }
 }
