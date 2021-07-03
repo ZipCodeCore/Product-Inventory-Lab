@@ -33,5 +33,15 @@ public class SneakerService {
         return inventory.toArray();
     }
 
+    public boolean delete(int id) {
+        for(Sneaker sneaker: inventory) {
+            if(sneaker.getId() == id){
+                inventory.remove(sneaker);
+                return true;
+            }
+        }
+        return false;
+    }
+
     //
 }

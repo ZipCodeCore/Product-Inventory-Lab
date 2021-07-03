@@ -95,6 +95,38 @@ public class SneakerServiceTest {
      */
     @Test
     public void SneakerServiceDeleteTest(){
+        //1
+        int expectedID1 = 1;
+        String expectedName = "NitroBalance";
+        String expectedBrand = "Nike";
+        String expectedSport = "Basket Ball";
+        int expectedSize = 11;
+        int expectedQty = 10;
+        float expectedPrice = 75.00f;
+
+        int expectedID2 = 2;
+        String expectedName2 = "BubbleGum";
+        String expectedBrand2 = "Adidas";
+        String expectedSport2 = "Tennis";
+        int expectedSize2 = 9;
+        int expectedQty2 = 20;
+        float expectedPrice2 = 80.00f;
+
+        //2
+        SneakerService newSneakerService = new SneakerService();
+        Sneaker newSneaker1 = newSneakerService.create(expectedName, expectedBrand, expectedSport, expectedSize, expectedQty, expectedPrice);
+        Sneaker newSneaker2 = newSneakerService.create(expectedName2, expectedBrand2, expectedSport2, expectedSize2, expectedQty2, expectedPrice2);
+
+        //Test 1
+        boolean deleteResult = newSneakerService.delete(expectedID2);
+        Assertions.assertEquals(true, deleteResult);
+
+        //Test 2
+        boolean deleteResult2 = newSneakerService.delete(expectedID2);
+        Assertions.assertEquals(false, deleteResult2);
+
+
+
 
     }
 }
