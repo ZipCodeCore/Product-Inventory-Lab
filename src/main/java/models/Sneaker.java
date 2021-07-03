@@ -5,17 +5,18 @@ public class Sneaker {
     private String name;
     private String brand;
     private String sport;
-    private Float size;
+    private float size;
     private int qty;
-    private Float price;
+    private float price;
 
-    public Sneaker(int id, String name, String brand, String sport, int qty, float price) {
+    public Sneaker(int id, String name, String brand, String sport, float size, int qty, float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.sport = sport;
         this.qty = qty;
         this.price = price;
+        this.size = size;
     }
 
     public void setName(String name) {

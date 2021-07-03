@@ -15,10 +15,11 @@ import org.junit.jupiter.api.Test;
             String expectedSport = "Tennnis";
             int expectedQty = 10;
             float expectedPrice = 80.00f;
+            float expectedSize = 10.5f;
 
             // (3)
             Sneaker testSneaker = new Sneaker(expectedId, expectedName, expectedBrand,
-                    expectedSport, expectedQty,expectedPrice);
+                    expectedSport, expectedSize, expectedQty, expectedPrice);
 
             // (4)
             Assertions.assertEquals(expectedId, testSneaker.getId());
