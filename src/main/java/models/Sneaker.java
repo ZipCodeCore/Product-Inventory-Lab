@@ -1,6 +1,7 @@
 package models;
 
 public class Sneaker {
+    private int id;
     private String name;
     private String brand;
     private String sport;
@@ -11,7 +12,8 @@ public class Sneaker {
     public Sneaker(){
     }
 
-    public Sneaker(String name, String brand, String sport, int size, int quantity, float price) {
+    public Sneaker(int id, String name, String brand, String sport, int size, int quantity, float price) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
         this.sport = sport;
@@ -63,7 +65,15 @@ public class Sneaker {
         this.price = price;
     }
 
-    public double getPrice() {
+    public float getPrice() {
         return this.price;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setID(int id){
+        this.id = id;
     }
 }

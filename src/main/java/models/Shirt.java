@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Shirt {
     private String shirtType;
     private String brand;
@@ -57,4 +59,6 @@ public class Shirt {
     public double getPrice() {
         return this.price;
     }
+
+
 }
