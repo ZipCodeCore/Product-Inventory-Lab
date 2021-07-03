@@ -44,11 +44,11 @@ class ClothingTest {
         //clothing.setName(expectedName);
         //Then
         Assertions.assertEquals(expectedName,clothing.getName());
-        Assertions.assertEquals(expectedName,clothing.getId());
-        Assertions.assertEquals(expectedName,clothing.getBrand());
-        Assertions.assertEquals(expectedName,clothing.getSize());
-        Assertions.assertEquals(expectedName,clothing.getQuantity());
-        Assertions.assertEquals(expectedName,clothing.getPrice());
+        Assertions.assertEquals(id,clothing.getId());
+        Assertions.assertEquals(brand,clothing.getBrand());
+        Assertions.assertEquals(size,clothing.getSize());
+        Assertions.assertEquals(quantity,clothing.getQuantity());
+        Assertions.assertEquals(price,clothing.getPrice());
 
 
 
