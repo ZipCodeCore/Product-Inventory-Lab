@@ -9,7 +9,7 @@ private float price;
 public Chocolate(){
 }
 
-    public Chocolate(String brand,String type,int quantity,int price){
+    public Chocolate(String brand,String type,int quantity,float price){
     this.brand=brand;
     this.type=type;
     this.quantity=quantity;

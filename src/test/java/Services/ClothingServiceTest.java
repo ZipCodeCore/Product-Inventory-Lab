@@ -56,7 +56,7 @@ class ClothingServiceTest {
         //When
         foundClothing = clothingService.findClothing(2);
         //Then
-        Assertions.assertTrue(true);
+        Assertions.assertEquals("Levis",foundClothing.getBrand());
 
     }
 
