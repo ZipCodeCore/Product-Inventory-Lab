@@ -8,12 +8,12 @@ public class Shirt {
     private String brand;
     private String material;
     private int quantity;
-    private double price;
+    private float price;
 
     public Shirt(){
     }
 
-    public Shirt(int id, String shirtType, String brand, String material, int quantity, double price) {
+    public Shirt(int id, String shirtType, String brand, String material, int quantity, float price) {
         this.id = id;
         this.shirtType = shirtType;
         this.brand = brand;
@@ -54,11 +54,11 @@ public class Shirt {
         return this.quantity;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public double getPrice() {
+    public float getPrice() {
         return this.price;
     }
 
@@ -69,4 +69,5 @@ public class Shirt {
     public int getId() {
         return this.id;
     }
+
 }

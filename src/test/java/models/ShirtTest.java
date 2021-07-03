@@ -49,7 +49,7 @@ public class ShirtTest {
     @Test
     public void getPriceTest(){
         //Given
-        double expected = 25.99;
+        float expected = 25.99f;
         shirt.setPrice(expected);
         //When
         double actual = shirt.getPrice();
@@ -74,7 +74,7 @@ public class ShirtTest {
         String brandExpected = "Produce of the Factory";
         String materialExpected = "Cotton";
         int quantityExpected = 50;
-        double priceExpected = 5.99;
+        float priceExpected = 5.99f;
         //When
         Shirt testShirt = new Shirt(idExpected, shirtTypeExpected, brandExpected, materialExpected, quantityExpected, priceExpected);
         //Then

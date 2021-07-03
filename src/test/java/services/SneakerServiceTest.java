@@ -44,6 +44,7 @@ public class SneakerServiceTest {
     @Test
     public void findTest(){
         //1
+        //Sneaker 1
         int expectedID = 1;
         String expectedName = "NitroBalance";
         String expectedBrand = "Nike";
@@ -51,13 +52,24 @@ public class SneakerServiceTest {
         int expectedSize = 11;
         int expectedQty = 10;
         float expectedPrice = 75.00f;
-        //2
-        SneakerService newSneakerService = new SneakerService();
-        Sneaker newSneaker = newSneakerService.create(expectedName, expectedBrand, expectedSport, expectedSize, expectedQty, expectedPrice);
-        //3
+        //Sneaker2
+        int expectedID2 = 2;
+        String expectedName2 = "RocketFeet";
+        String expectedBrand2 = "NewBalance";
+        String expectedSport2 = "Running";
+        int expectedSize2 = 6;
+        int expectedQty2 = 20;
+        float expectedPrice2 = 90.00f;
 
+        //2
+        SneakerService newSneakerService1 = new SneakerService();
+        //Making sneaker1
+        Sneaker newSneaker = newSneakerService1.create(expectedName, expectedBrand, expectedSport, expectedSize, expectedQty, expectedPrice);
+        //Making sneaker2
+        Sneaker newSneaker2 = newSneakerService1.create(expectedName2, expectedBrand2, expectedSport2, expectedSize2, expectedQty2, expectedPrice2);
+        //3
         //4
-        Assertions.assertEquals(newSneaker,newSneakerService.find(expectedID));
+        Assertions.assertEquals(newSneaker2,newSneakerService1.find(expectedID2));
     }
 
     /**

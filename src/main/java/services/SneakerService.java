@@ -5,7 +5,9 @@ import models.Sneaker;
 import java.util.ArrayList;
 
 public class SneakerService {
+    //Generate an int ID for the each sneaker
     public static int nextID = 1;
+    //Create an inventory arrayList for sneakers
     private ArrayList<Sneaker> inventory = new ArrayList<>();
 
     //Creates a new sneaker object and add it to the inventory.
@@ -20,9 +22,9 @@ public class SneakerService {
     }
 
     //Finds a particular sneaker object in inventory using a provided id.
-    public Sneaker find(int id) {
+    public Object find(int id) {
         for(Sneaker sneaker : inventory) {
-            if(sneaker.getId() == (id)){
+            if(sneaker.getId() == id){
                 return sneaker;
             }
         }
