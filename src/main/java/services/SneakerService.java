@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class SneakerService {
     public static int nextID = 1;
-    private ArrayList<Sneaker> inventory = new ArrayList<Sneaker>();
+    private ArrayList<Sneaker> inventory = new ArrayList<>();
 
     //Creates a new sneaker object and add it to the inventory.
     public Sneaker create(String name, String brand, String sport, int size, int qty, float price) {
