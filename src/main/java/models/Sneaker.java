@@ -6,9 +6,18 @@ public class Sneaker {
     private String sport;
     private int size;
     private int quantity;
-    private double price;
+    private float price;
 
     public Sneaker(){
+    }
+
+    public Sneaker(String name, String brand, String sport, int size, int quantity, float price) {
+        this.name = name;
+        this.brand = brand;
+        this.sport = sport;
+        this.size = size;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public void setName(String name){
@@ -50,7 +59,7 @@ public class Sneaker {
         return this.quantity;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 

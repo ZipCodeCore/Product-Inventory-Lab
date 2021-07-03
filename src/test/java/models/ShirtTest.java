@@ -54,4 +54,22 @@ public class ShirtTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void shirtConstructorTest(){
+        //Given
+        String shirtTypeExpected = "Crew Neck" ;
+        String brandExpected = "Produce of the Factory";
+        String materialExpected = "Cotton";
+        int quantityExpected = 50;
+        double priceExpected = 5.99;
+        //When
+        Shirt testShirt = new Shirt(shirtTypeExpected, brandExpected, materialExpected, quantityExpected, priceExpected);
+        //Then
+        Assertions.assertEquals(shirtTypeExpected, testShirt.getShirtType());
+        Assertions.assertEquals(brandExpected, testShirt.getBrand());
+        Assertions.assertEquals(materialExpected, testShirt.getMaterial());
+        Assertions.assertEquals(quantityExpected, testShirt.getQuantity());
+        Assertions.assertEquals(priceExpected, testShirt.getPrice());
+    }
+
 }

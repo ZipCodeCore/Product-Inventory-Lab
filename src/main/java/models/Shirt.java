@@ -10,6 +10,14 @@ public class Shirt {
     public Shirt(){
     }
 
+    public Shirt(String shirtType, String brand, String material, int quantity, double price) {
+        this.shirtType = shirtType;
+        this.brand = brand;
+        this.material = material;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
     public void setShirtType(String type) {
         this.shirtType = type;
     }
