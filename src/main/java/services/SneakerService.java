@@ -8,14 +8,37 @@ public class SneakerService {
     private static int nextId = 1;  // (1)
     private static ArrayList<Sneaker> inventory = new ArrayList<>();  // (2)
     public static Sneaker create(String name, String brand, String sport, float size, int quantity, float price) {
-
-        // (2)
         Sneaker createdSneaker = new Sneaker(nextId++, name, brand, sport, size, quantity, price);
-
-        // (3)
         inventory.add(createdSneaker);
-
-        // (4)
         return createdSneaker;
+    }
+    //read
+    public Sneaker findSneaker(int id) {
+        // should take an int and return an object with that id, if exists
+        for(Sneaker element : inventory){
+            if(element.getId() == id){
+                return element;
+            }
+        }
+        return null;
+    }
+
+    //read all
+    public Sneaker[] findAll() {
+        // should return a basic array copy of the ArrayList
+        return inventory.toArray(new Sneaker[0]);
+    }
+
+    //delete
+    public boolean delete(int id) {
+        // should remove the object with this id from the ArrayList if exists and return true.
+        // Otherwise return false
+        for(Sneaker element: inventory){
+            if(element.getId() == id){
+                inventory.remove(element);
+                return true;
+            }
+        }
+        return false;
     }
 }
