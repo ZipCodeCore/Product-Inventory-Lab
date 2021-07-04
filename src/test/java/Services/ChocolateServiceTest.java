@@ -87,4 +87,18 @@ class ChocolateServiceTest {
         //Then
         Assertions.assertEquals(true, chocolateDeleted);
     }
+
+    @Test
+    void update() {
+    //given
+        ChocolateService chocolateService=new ChocolateService();
+        Boolean chocolateUpdated = true;
+        chocolateService.create("cornetto","ice cream",5,5);
+
+    //when
+    chocolateUpdated=chocolateService.update("cornetto",10);
+
+    //then
+        Assertions.assertEquals(true,chocolateUpdated);
+    }
 }

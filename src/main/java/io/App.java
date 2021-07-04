@@ -34,7 +34,7 @@ public class App {
                 String options = Console.getStringInput("Choose an option\n" +
                         "1.Create chocolate\n" +
                         "2.Read Inventory of \n" +
-                        "3.Find all Product \n" +
+                        "3.Update Product \n" +
                         "4.Delete Product \n" +
                         "5.Exit the program \n");
 
