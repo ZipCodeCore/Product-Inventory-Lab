@@ -1,14 +1,8 @@
 package io;
 
-import services.ShirtService;
-import services.SneakerService;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Console {
-    public SneakerService sneakerService = new SneakerService();
-    public ShirtService shirtService = new ShirtService();
 
     public static void printWelcome(){
         System.out.println("" +
@@ -41,68 +35,46 @@ public class Console {
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        String userInput = scanner.nextLine();
-        return userInput;
+        return scanner.nextLine();
     }
 
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        int userInput = Integer.parseInt(scanner.nextLine());
-        return userInput;
+        return Integer.parseInt(scanner.nextLine());
     }
 
     public static Float getFloatInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(String.valueOf(prompt));
-        Float userInput = Float.parseFloat((scanner.nextLine()));
-        return userInput;
+        return Float.parseFloat((scanner.nextLine()));
     }
 
     public static void options() {
         boolean exitNow = false;
-        while(exitNow){
-            Integer option = Console.getIntegerInput("Type number to choose option");
+        while(exitNow == false){
+            Integer option = Console.getIntegerInput("Type number to choose option:");
             switch (option) {
                 case 1:
-                    makeNewProduct();
+                    Inventory.makeNewProduct();
                     break;
                 case 2:
-                    //Do something
+                    //View current inventory
+                    Inventory.viewInventory();
                     break;
                 case 3:
-                    //Do something
+                    //Update product - delete product
+                    Inventory.removeProduct();
                     break;
                 case 4:
-                    //Do something
+                    //View product reports
+                    Inventory.viewProduct();
                     break;
                 case 5:
+                    //Exit
                     exitNow = true;
                     break;
             }
         }
-
-
     }
-
-    public static void makeNewProduct(){
-        String productType = Console.getStringInput("Choose shirt or sneaker").toLowerCase(Locale.ROOT);
-        switch(productType) {
-            case "shirt":
-                //Male new shirt
-
-                break;
-            case "sneaker":
-                //Make new sneaker
-                String name = Console.getStringInput("Enter sneaker name:");
-                String brand = Console.getStringInput("Enter sneaker brand:");
-                String sport = Console.getStringInput("Enter sneaker sport:");
-                int size = Console.getIntegerInput("Enter sneaker size:");
-                int qty = Console.getIntegerInput("Enter sneaker quantity:");
-                float price = Console.getFloatInput("Enter price:");
-                //sneakerService.create(name, brand, sport, size, qty, price);
-                break;
-        }
-    }
-
 }

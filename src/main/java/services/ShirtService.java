@@ -9,7 +9,7 @@ public class ShirtService {
     //ID for each shirt
     private static int nextID = 1;
     //ArrayList 'inventory' to hold all shirts
-    private ArrayList<Shirt> inventory = new ArrayList<>();
+    private static ArrayList<Shirt> inventory = new ArrayList<>();
 
     //Method to create a new shirt and add to inventory
     public Shirt create(String shirtType, String brand, String material, int quantity, float price) {
@@ -30,8 +30,8 @@ public class ShirtService {
         return null;
     }
 
-    public Object[] findAll() {
-        return inventory.toArray();
+    public Shirt[] findAll() {
+        return inventory.toArray(new Shirt[0]);
     }
 
     public boolean delete(int id) {

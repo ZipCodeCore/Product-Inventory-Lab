@@ -1,7 +1,5 @@
 package models;
 
-import java.util.ArrayList;
-
 public class Shirt {
     private int id;
     private String shirtType;

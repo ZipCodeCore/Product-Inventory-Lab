@@ -31,8 +31,8 @@ public class SneakerService {
         return null;
     }
 
-    public Object[] findAll() {
-        return inventory.toArray();
+    public Sneaker[] findAll() {
+        return inventory.toArray(new Sneaker[0]);
     }
 
     public boolean delete(int id) {
