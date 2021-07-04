@@ -55,7 +55,7 @@ public class Clothing {
     public Clothing()
     {}
 
-    public Clothing(int id,String name,String brand,int Size,int quantity,float price){
+    public Clothing(int id,String name,String brand,int size,int quantity,float price){
         this.id=id;
         this.name=name;
         this.brand=brand;
