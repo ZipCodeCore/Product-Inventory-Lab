@@ -71,7 +71,23 @@ public class Whiskey implements Product{
         return price;
     }
 
+    public Float getTotalPrice(){
+        return getPrice() * getQty();
+    }
+
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString(){
+        String readout = "Name:" + getName();
+        readout += "  Brand:" + getBrand();
+        readout += "  Proof:" + getProof();
+        readout += "  Size:" + getSize();
+        readout += "  Price:$" + getPrice();
+        readout += "  Quantity:" + getQty();
+
+        return readout;
     }
 }

@@ -3,6 +3,9 @@ package models;
 import services.SneakerService;
 import services.WhiskeyService;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Inventory {
     private SneakerService sneakerService = new SneakerService();
     private WhiskeyService whiskeyService = new WhiskeyService();
@@ -64,5 +67,19 @@ Method to return total $ amount of Sneakers, total $ amount of Whiskey, and the 
 
     public Float totalInventoryValue(){
         return totalSneakersValue() + totalWhiskeyValue();
+    }
+
+    public Product[] getAllProductsArrayList(){
+        ArrayList<Product> masterList = new ArrayList<>();
+        Sneaker[] sneakerList = sneakerService.findAll();
+        Whiskey[] whiskeyList = whiskeyService.findAll();
+
+        for(Product element: sneakerList)
+            masterList.add(element);
+
+        for(Product element: whiskeyList)
+            masterList.add(element);
+
+        return masterList.toArray(new Product[0]);
     }
 }

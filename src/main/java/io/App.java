@@ -1,8 +1,8 @@
 package io;
-import services.SneakerService;
+import models.Inventory;
+import java.util.Scanner;
 
 public class App {
-    private SneakerService sneakerService = new SneakerService(); // (1)
 
     public static void main(String... args){
         App application = new App();
@@ -13,6 +13,8 @@ public class App {
         // (4)
         // application logic here
         // call methods to take user input and interface with services
+        Console.initializeSampleInventory();
         Console.printWelcome();
+        Console.topMenu();
     }
 }

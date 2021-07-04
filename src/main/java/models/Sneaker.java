@@ -9,6 +9,7 @@ public class Sneaker implements Product {
     private int qty;
     private float price;
 
+
     public Sneaker(int id, String name, String brand, String sport, float size, int qty, float price) {
         this.id = id;
         this.name = name;
@@ -71,7 +72,23 @@ public class Sneaker implements Product {
         return price;
     }
 
+    public Float getTotalPrice(){
+        return getQty() * getPrice();
+    }
+
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString(){
+        String readout = "Name:" + getName();
+        readout += "  Brand:" + getBrand();
+        readout += "  Sport:" + getSport();
+        readout += "  Size:" + getSize();
+        readout += "  Price:$" + getPrice();
+        readout += "  Quantity:" + getQty();
+
+        return readout;
     }
 }
