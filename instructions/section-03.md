@@ -9,12 +9,12 @@ Now that we have production models and services to manage them we can pull every
 * Create a user interface to create, read, update and delete products
 
 ## Part 1 - Input Output
-We will need to allow user input in order for the application to function. In order to do this we will use the Scanner class to accept input and methods from the System.out package to print to the console. In order to keep our code a bit cleaner as well as add a layer of abstraction we will use a Console class. 
+We will need to allow user input in order for the application to function. In order to do this we will use the Scanner class to accept input and methods from the System.out package to print to the console. In order to keep our code a bit cleaner as well as add a layer of abstraction we will use a io class. 
 
 ```
 package io;
 
-public class Console {
+public class io {
 
 }
 ```
@@ -24,7 +24,7 @@ Notice that I've added this to an _io_ package.
 Now we can keep repetitious System.out and Scanner calls out of the main application code. We can also use this class to print large output strings that would bloat our code.
 
 ```
-public class Console {
+public class io {
     public static void printWelcome(){
         System.out.println("" +
                 "**************************************************" +
@@ -40,10 +40,10 @@ public class Console {
 Having this print line string in the code is large and litters up the main code. Having it abstracted away alows us to keep the main code clean and easy to read. We will simply call the _printWelcome()_ behaviour wherever we want to call this code.
 
 ```
-Console.printWelcome()
+io.printWelcome()
 ```
 
-Whenever we want to capture user input or display output we will create methods in the Console class to handle these behaviours.
+Whenever we want to capture user input or display output we will create methods in the io class to handle these behaviours.
 
 ## Part 2 - Application class
 Now it is time to put all of these classes we have created to work. We will begin by creating a App class to initialize the application logic and initialize the services. This is the top most class and will start the program
@@ -76,7 +76,7 @@ public class App {
 		// (4)
 		// application logic here 
 		// call methods to take user input and interface with services
-		Console.printWelcome();
+		io.printWelcome();
 	}
 }
 ```
@@ -97,7 +97,7 @@ Now that we have a way to start the application, create the rest of the code to 
 
 ## Conclusion
 
-Creating a Console class allowed us to abstract away user interface components of the code. Now the main code isn't concerned with how UI is done, it is only concerned with what it does. We created an application class to house the elements of the program. Finally, creating a user interface to allow a user to interact (Create, Read, Update, and Delete) with items in the inventory.
+Creating a io class allowed us to abstract away user interface components of the code. Now the main code isn't concerned with how UI is done, it is only concerned with what it does. We created an application class to house the elements of the program. Finally, creating a user interface to allow a user to interact (Create, Read, Update, and Delete) with items in the inventory.
 
 
 
