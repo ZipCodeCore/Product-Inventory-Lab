@@ -1,6 +1,7 @@
 package Models;
 
 public class Chocolate {
+    private int id;
 private String brand;
 private String type;
 private int quantity;
@@ -9,11 +10,19 @@ private float price;
 public Chocolate(){
 }
 
-    public Chocolate(String brand,String type,int quantity,float price){
+    public Chocolate(int id,String brand,String type,int quantity,float price){
     this.brand=brand;
+    this.id = id;
     this.type=type;
     this.quantity=quantity;
     this.price=price;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBrand() {
