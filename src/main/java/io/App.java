@@ -5,13 +5,16 @@ import Models.Clothing;
 import Services.ChocolateService;
 import Services.ClothingService;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class App {
     private ClothingService clothingService = new ClothingService(); // (1)
     private ChocolateService chocolateService =new ChocolateService();
     private Chocolate chocolate=new Chocolate();
     private Clothing clothing = new Clothing();
 
-    public static void main(String... args){
+    public static void main(String... args) throws IOException {
 
 
             App application = new App(); // (2)
@@ -20,7 +23,7 @@ public class App {
 
         }
 
-        public void init(){
+        public void init() throws IOException {
             // (4)
             // application logic here
             // call methods to take user input and interface with services
@@ -37,7 +40,9 @@ public class App {
                         "2.Read Inventory of \n" +
                         "3.Update Product \n" +
                         "4.Delete Product \n" +
-                        "5.Exit the program \n");
+                        "5.Save to Json \n"+
+                        "6.Read from Json \n"+
+                        "7.Exit the program \n");
 
 
                 switch (options) {
@@ -79,8 +84,24 @@ public class App {
                         }
                         else Console.println("Product not found");
                         break;
-
                     case "5":
+                        chocolateService.writeJson();
+                        Console.println("Value saved to chocolate.json");
+                        break;
+                    case "6":
+                        ArrayList<Chocolate> chocolates = chocolateService.readJson();
+                        //chocolateService.in
+                        for (Chocolate s:chocolates
+                             ) {
+                            Console.println("Brand:"+s.getBrand()+"\n");
+                            Console.println("Type:"+s.getType()+"\n");
+                            Console.println("Quantity:"+s.getQuantity()+"\n");
+                            Console.println("Price:"+s.getPrice()+"\n");
+                        }
+
+                        break;
+
+                    case "7":
                         exitProgram=true;
                         Console.println("Program Exited:Goodbye");
                         break;

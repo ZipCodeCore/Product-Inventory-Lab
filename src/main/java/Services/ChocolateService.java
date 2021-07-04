@@ -1,12 +1,13 @@
 package Services;
 
 import Models.Chocolate;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import utils.CSVUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -107,5 +108,16 @@ public class ChocolateService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Chocolate> readJson() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        this.inventory = objectMapper.readValue(new File("chocolate.json"), new TypeReference<ArrayList<Chocolate>>(){});
+        return this.inventory;
+    }
+    public void writeJson() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        writer.writeValue(new File("chocolate.json"), inventory);
     }
 }
