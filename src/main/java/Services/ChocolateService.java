@@ -31,6 +31,16 @@ public class ChocolateService {
         ArrayList<Chocolate> inventoryClone =(ArrayList<Chocolate>) inventory.clone();
         return (Chocolate[]) inventoryClone.toArray();
     }
+
+    public Boolean update(String brand,Integer quantity){
+        for(Chocolate updateQuantity:inventory){
+            if(updateQuantity.getBrand().equals(brand)){
+                updateQuantity.setQuantity(quantity);
+                return true;
+            }
+        }
+        return false;
+    }
     public boolean delete(String brand){
         for(Chocolate deleteObject : inventory){
             if(deleteObject.getBrand().equals(brand)){
