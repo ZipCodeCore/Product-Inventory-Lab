@@ -1,6 +1,6 @@
 package models;
 
-public class Whiskey {
+public class Whiskey implements Product{
     private int id;
     private String name;
     private String brand;

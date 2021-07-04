@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class WhiskeyService {
     private static int nextId = 1;
-    private static ArrayList<Whiskey> inventory = new ArrayList<>();
-    public static Whiskey create(String name, String brand, int proof, float size, int quantity, float price) {
+    private ArrayList<Whiskey> inventory = new ArrayList<>();
+    public  Whiskey create(String name, String brand, int proof, float size, int quantity, float price) {
         Whiskey createdWhiskey = new Whiskey(nextId++, name, brand, proof, size, quantity, price);
         inventory.add(createdWhiskey);
         return createdWhiskey;
