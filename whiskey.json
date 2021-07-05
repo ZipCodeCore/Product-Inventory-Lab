@@ -1,0 +1,28 @@
+[ {
+  "id" : 1,
+  "name" : "Jawn Juice",
+  "brand" : "NoDrive",
+  "proof" : 45,
+  "size" : 50.0,
+  "qty" : 125,
+  "price" : 45.5,
+  "totalPrice" : 5687.5
+}, {
+  "id" : 2,
+  "name" : "Ewwater",
+  "brand" : "Bad Taste",
+  "proof" : 45,
+  "size" : 45.7,
+  "qty" : 99,
+  "price" : 55.5,
+  "totalPrice" : 5494.5
+}, {
+  "id" : 3,
+  "name" : "Foolaid",
+  "brand" : "Krunk Bvg Co",
+  "proof" : 60,
+  "size" : 80.0,
+  "qty" : 22,
+  "price" : 89.95,
+  "totalPrice" : 1978.8999
+} ]
