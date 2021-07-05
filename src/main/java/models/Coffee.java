@@ -1,5 +1,6 @@
 package models;
 
+
 public class Coffee {
     private Integer unitId;
     private Integer amountInStock;
@@ -8,8 +9,14 @@ public class Coffee {
     private Double price;
     private Double weight;
 
-    public Coffee(Integer expectedUnitId, Integer expectedAmountInStock, String expectedBrand, String expectedFlavor, Double expectedPrice, Double expectedWeight) {
-
+    public Coffee(Integer expectedUnitId, Integer expectedAmountInStock, String expectedBrand,
+                  String expectedFlavor, Double expectedPrice, Double expectedWeight) {
+        this.unitId = expectedUnitId;
+        this.amountInStock = expectedAmountInStock;
+        this.brand = expectedBrand;
+        this.flavor = expectedFlavor;
+        this.price = expectedPrice;
+        this.weight = expectedWeight;
     }
 
     public Integer getUnitId() {
@@ -28,7 +35,7 @@ public class Coffee {
         this.amountInStock = amountInStock;
     }
 
-    public String getBrand() {
+    public java.lang.String getBrand() {
         return brand;
     }
 
@@ -36,7 +43,7 @@ public class Coffee {
         this.brand = brand;
     }
 
-    public String getFlavor() {
+    public java.lang.String getFlavor() {
         return flavor;
     }
 
@@ -60,4 +67,15 @@ public class Coffee {
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        String printingInventory = "Unit ID: " + getUnitId();
+        printingInventory += "Amount in Stock: " + getAmountInStock();
+        printingInventory += "Brand Name: " + getBrand();
+        printingInventory += "Flavor Type: " + getFlavor();
+        printingInventory += "Retail Price: " + getPrice();
+        printingInventory += "Retail Weight: " + getWeight();
+
+        return printingInventory;
+    }
 }
