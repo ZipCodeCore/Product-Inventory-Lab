@@ -96,5 +96,31 @@ public class HatTest {
         Assertions.assertEquals(expected, testHat.getPrice());
     }
 
+    @Test
+    public void constructorTest() {
+        // Given
+        int expectedId = 302;
+        String expectedType = "Fitted";
+        String expectedSport = "Baseball";
+        String expectedTeam = "New York Yankees";
+        String expectedSize = "Small";
+        int expectedQuantity = 20;
+        float expectedPrice = 40.00F;
+
+        // When
+        Hat testHat = new Hat(expectedId, expectedType, expectedSport,
+                expectedTeam, expectedSize, expectedQuantity, expectedPrice);
+
+        // Then
+        Assertions.assertEquals(expectedId, testHat.getHatId());
+        Assertions.assertEquals(expectedType, testHat.getType());
+        Assertions.assertEquals(expectedSport, testHat.getSport());
+        Assertions.assertEquals(expectedTeam, testHat.getTeam());
+        Assertions.assertEquals(expectedSize, testHat.getSize());
+        Assertions.assertEquals(expectedQuantity, testHat.getQuantity());
+        Assertions.assertEquals(expectedPrice, testHat.getPrice());
+
+    }
+
 
 }

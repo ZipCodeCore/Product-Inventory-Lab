@@ -9,6 +9,25 @@ public class Hat {
     private int quantity;
     private float price;
 
+    public Hat(){
+        this.hatId = Integer.MAX_VALUE;
+        this.type = "";
+        this.sport = "";
+        this.team = "";
+        this.size = "";
+        this.quantity = Integer.MAX_VALUE;
+        this.price = Float.MAX_VALUE;
+    }
+
+    public Hat (int hatId, String type, String sport, String team, String size, int quantity, float price) {
+        this.hatId = hatId;
+        this.type = type;
+        this.sport = sport;
+        this.team = team;
+        this.size = size;
+        this.quantity = quantity;
+        this.price = price;
+    }
 
     //================ SETTERS ================//
     public void setHatId(int hatId) {

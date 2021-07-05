@@ -93,7 +93,6 @@ public class Sneaker {
         return price;
     }
 
-
 }
 
 
