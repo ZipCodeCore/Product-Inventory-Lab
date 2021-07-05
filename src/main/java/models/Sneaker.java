@@ -1,5 +1,12 @@
 package models;
 
+import utils.CSVUtils;
+
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Sneaker implements Product {
     private int id;
     private String name;
@@ -91,4 +98,6 @@ public class Sneaker implements Product {
 
         return readout;
     }
+
+
 }
