@@ -1,7 +1,7 @@
 package models;
 
 public class Sneaker {
-    private int id;
+    private int sneakerId;
     private String name;
     private String brand;
     private String sport;
@@ -11,8 +11,8 @@ public class Sneaker {
 
 
     //================ SETTERS ================//
-    public void setId(int id) {
-        this.id = id;
+    public void setSneakerId(int sneakerId) {
+        this.sneakerId = sneakerId;
     }
 
     public void setName(String name) {
@@ -41,8 +41,8 @@ public class Sneaker {
 
 
     //================ GETTERS ================//
-    public int getId() {
-        return id;
+    public int getSneakerId() {
+        return sneakerId;
     }
 
     public String getName() {

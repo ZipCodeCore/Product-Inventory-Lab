@@ -6,16 +6,16 @@ import org.junit.jupiter.api.Test;
 public class SneakerTest {
 
     @Test
-    public void setIdTest() {
+    public void setSneakerIdTest() {
         //Given
         int expected = 7001;
 
         // When
         Sneaker testSneaker = new Sneaker();
-        testSneaker.setId(expected);
+        testSneaker.setSneakerId(expected);
 
         // Then
-        Assertions.assertEquals(expected, testSneaker.getId());
+        Assertions.assertEquals(expected, testSneaker.getSneakerId());
     }
 
     @Test
