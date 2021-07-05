@@ -1,20 +1,21 @@
 package services;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import models.Sneaker;
 import models.Whiskey;
 import utils.CSVUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class WhiskeyService {
     private static int nextId = 1;
-    private static ArrayList<Whiskey> inventory = new ArrayList<>();
+    private static List<Whiskey> inventory = new ArrayList<>();
     public  Whiskey create(String name, String brand, int proof, float size, int quantity, float price) {
         Whiskey createdWhiskey = new Whiskey(nextId++, name, brand, proof, size, quantity, price);
         inventory.add(createdWhiskey);
@@ -98,5 +99,17 @@ public class WhiskeyService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void writeJSON() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        writer.writeValue(new File("whiskey.json"), inventory);
+    }
+
+    public static void readJSON() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        inventory = objectMapper.readValue(new File("sneaker.json"), new TypeReference<List<Whiskey>>(){});
+
     }
 }

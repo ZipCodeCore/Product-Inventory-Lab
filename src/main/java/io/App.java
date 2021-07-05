@@ -3,6 +3,7 @@ import models.Inventory;
 import models.Sneaker;
 import services.SneakerService;
 import utils.CSVUtils;
+import utils.JSONUtils;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -13,6 +14,7 @@ public class App {
         App application = new App();
         application.init();
         CSVUtils.writeFiles();
+        JSONUtils.writeFiles();
     }
 
     public void init() throws IOException {
@@ -22,7 +24,8 @@ public class App {
 
         //Console.initializeSampleInventory();
         //SneakerService.csvFileSaver();
-        CSVUtils.loadFiles();
+        //CSVUtils.loadFiles();
+        JSONUtils.readFiles();
         Console.printWelcome();
         Console.topMenu();
     }

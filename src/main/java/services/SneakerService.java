@@ -1,20 +1,21 @@
 package services;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import com.sun.deploy.net.MessageHeader;
 import models.Sneaker;
 import utils.CSVUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class SneakerService {
     private static int nextId = 1;  // (1)
-    private static ArrayList<Sneaker> inventory = new ArrayList<>();
+    private static List<Sneaker> inventory = new ArrayList<>();
     public  Sneaker create(String name, String brand, String sport, float size, int quantity, float price) {
         Sneaker createdSneaker = new Sneaker(nextId++, name, brand, sport, size, quantity, price);
         inventory.add(createdSneaker);
@@ -103,5 +104,17 @@ public class SneakerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void writeJSON() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        writer.writeValue(new File("sneaker.json"), inventory);
+    }
+
+    public static void readJSON() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        inventory = objectMapper.readValue(new File("sneaker.json"), new TypeReference<List<Sneaker>>(){});
+
     }
 }
