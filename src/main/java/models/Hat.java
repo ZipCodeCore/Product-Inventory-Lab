@@ -68,4 +68,5 @@ public class Hat {
         return price;
     }
 
+
 }

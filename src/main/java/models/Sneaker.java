@@ -9,6 +9,30 @@ public class Sneaker {
     private int quantity;
     private float price;
 
+    public Sneaker() {
+        this.sneakerId = Integer.MAX_VALUE;
+        this.name = "";
+        this.brand = "";
+        this.sport = "";
+        this.size = Double.MAX_VALUE;
+        this.quantity = Integer.MAX_VALUE;
+        this.price = Float.MAX_VALUE;
+    }
+
+    public Sneaker(int sneakerId, String name, String brand, String sport, double size, int quantity, float price) {
+        this.sneakerId = sneakerId;
+        this.name = name;
+        this.brand = brand;
+        this.sport = sport;
+        this.size = size;
+        this.quantity = quantity;
+        this.price = price;
+}
+
+    public static void main(String[] args) {
+
+    }
+
 
     //================ SETTERS ================//
     public void setSneakerId(int sneakerId) {
