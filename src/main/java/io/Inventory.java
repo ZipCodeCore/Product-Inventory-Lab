@@ -2,10 +2,14 @@ package io;
 
 import models.Shirt;
 import models.Sneaker;
+import services.CSVUtils;
 import services.ShirtService;
 import services.SneakerService;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class Inventory {
@@ -13,9 +17,9 @@ public class Inventory {
     static ShirtService shirtService = new ShirtService();
 
     static void putSomeItemsInInventory() {
-        sneakerService.create("NitroBalance", "Nike", "Running", 8, 15, 60.00f);
-        sneakerService.create("RainbowFeet", "Adidas", "Soccer", 7, 20, 55.00f);
-        sneakerService.create("BubbleGum", "Puma", "Dance", 6, 10, 70.00f);
+        sneakerService.create("NitroBalance", "Nike", "Running", 8,  60.00f);
+        sneakerService.create("RainbowFeet", "Adidas", "Soccer", 7, 55.00f);
+        sneakerService.create("BubbleGum", "Puma", "Dance", 6, 70.00f);
         shirtService.create("Vneck", "Jcrew", "Cotton", 25, 20.00f);
         shirtService.create("Button-Down", "FruitDeLoom", "Cotton", 50, 10.00f);
         shirtService.create("Sweater", "Nautica", "Wool", 15, 45.00f);
@@ -39,11 +43,11 @@ public class Inventory {
         switch (productType.toLowerCase(Locale.ROOT)) {
             case "shirts":
                 Integer viewThisShirt = Console.getIntegerInput("Enter item ID to view");
-                shirtService.find(viewThisShirt);
+                Console.println("" + shirtService.find(viewThisShirt).toString());
                 break;
             case "sneaker":
                 Integer viewThisSneaker = Console.getIntegerInput("Enter item ID to view");
-                sneakerService.find(viewThisSneaker);
+                Console.println("" + sneakerService.find(viewThisSneaker).toString());
                 break;
         }
     }
@@ -70,7 +74,7 @@ public class Inventory {
                 String shirtType = Console.getStringInput("Enter shirt type:");
                 String shirtBrand = Console.getStringInput("Enter shirt brand:");
                 String shirtMaterial = Console.getStringInput("Enter shirt material:");
-                int shirtQuantity = Console.getIntegerInput("Enter quantity:");;
+                int shirtQuantity = Console.getIntegerInput("Enter quantity:");
                 float shirtPrice = Console.getFloatInput("Enter price");
                 shirtService.create(shirtType, shirtBrand, shirtMaterial, shirtQuantity, shirtPrice);
 
@@ -83,7 +87,7 @@ public class Inventory {
                 int sneakerSize = Console.getIntegerInput("Enter sneaker size:");
                 int sneakerQty = Console.getIntegerInput("Enter quantity:");
                 float sneakerPrice = Console.getFloatInput("Enter price:");
-                sneakerService.create(sneakerName, sneakerBrand, sneakerSport, sneakerSize, sneakerQty, sneakerPrice);
+                sneakerService.create(sneakerName, sneakerBrand, sneakerSport, sneakerQty, sneakerPrice);
                 break;
         }
     }
