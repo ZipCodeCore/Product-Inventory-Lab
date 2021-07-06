@@ -106,10 +106,10 @@ public class SneakerService {
         }
     }
 
-//    public void readInJSON(){
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        inventory = objectMapper.readValue(new File("sneaker.json"), new TypeReference<List<Sneaker>>(){});
-//    }
+    public void readInJSON(){
+        ObjectMapper objectMapper = new ObjectMapper();
+        inventory = objectMapper.readValue(new File("sneaker.json"), new TypeReference<List<Sneaker>>(){});
+    }
 
     public void writeInJSON() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
