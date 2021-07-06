@@ -10,6 +10,7 @@ In this section we start with an empty Java project and start to setup our envir
 * Import a testing framework to support Test Driven Development(TDD)
 * Creating classes stubs for our products
 
+
 ## Part 1 - Repository
 
 1. Log into github.com
