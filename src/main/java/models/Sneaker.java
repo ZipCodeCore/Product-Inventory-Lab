@@ -1,6 +1,10 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sneaker {
+    public int getQuantity;
     private int id;
     private String name;
     private String brand;
@@ -9,40 +13,74 @@ public class Sneaker {
     private int qty;
     private float price;
 
+    public Sneaker(int id, String name, String brand, String sport, int qty, int size, float price) {
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.sport = sport;
+        this.qty = qty;
+        this.size = size;
+        this.price = price;
 
-
-
-
-    public Sneaker(int expectedId, String expectedName, String expectedBrand, String expectedSport, int expectedQty, float expectedPrice) {
     }
 
-    public void setName(String name) {
+    public Sneaker(int id, String name, String brand, String sport, int qty, float price) {
+    }
+
+
+    public  String getName() {
+        return this.name;
+    }
+    public void  setName(String name ) {
         this.name = name;
     }
 
-    public int getId() {
-        return 6;
+    public int getId(){
+        return id;
     }
 
-    public String getName() {
-        return "Stan Smith";
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBrand() {
-        return "Adidas";
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getSport() {
+        return sport;
+    }
 
-        return "Tennis";
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     public int getQty() {
-        return 10;
+        return qty;
     }
 
-    public float getPrice() {
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
 
-        return 80;
+    public float getPrice(){
+        return price;
+    }
+
+    public void setPrice(){
+        this.price = price;
     }
 }
+
