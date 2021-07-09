@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class App {
+    //instantiation
     private ClothingService clothingService = new ClothingService(); // (1)
     private ChocolateService chocolateService =new ChocolateService();
     private Chocolate chocolate=new Chocolate();

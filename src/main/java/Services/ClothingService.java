@@ -29,9 +29,11 @@ public Clothing findClothing(int id) {
 }
 
 public Clothing[] findAll(){
+
 //    ArrayList<Clothing> inventoryClone =(ArrayList<Clothing>) inventory.clone();
 //    return (Clothing[]) inventoryClone.toArray();
     return inventory.toArray(new Clothing[0]);
+
 }
 public boolean delete(int id){
 for(Clothing deleteObject : inventory){
