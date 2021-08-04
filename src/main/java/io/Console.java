@@ -88,8 +88,6 @@ public class Console {
 
 
 
-
-
       //=============================================================================================//
      // ================================ SHOW EXISTING PRODUCTS OPTIONS =========================== //
     //=============================================================================================//
@@ -162,9 +160,12 @@ public class Console {
               case 1:
                   // Allow user to update sneakers
 
+                  updateSelector();
                   break;
               case 2:
                   // Allow user to update hats
+
+                  updateSelector();
                   break;
               case 3:
                   // Go back to main menu
@@ -175,10 +176,6 @@ public class Console {
                   updateSelector();
           }
       }
-
-
-
-
 
 
 
@@ -202,9 +199,12 @@ public class Console {
             case 1:
                 // Allow user to delete sneaker
 
+                deleteSelector();
                 break;
             case 2:
                 // Allow user to delete hat
+
+                deleteSelector();
                 break;
             case 3:
                 // Go back to main menu
@@ -212,13 +212,9 @@ public class Console {
                 break;
             default:
                 print("Please enter a valid number ... Try again!");
-                updateSelector();
+                deleteSelector();
         }
     }
-
-
-
-
 
 
 }
