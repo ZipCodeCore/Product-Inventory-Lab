@@ -1,0 +1,7 @@
+[ {
+  "id" : 1,
+  "brand" : "cornetto",
+  "type" : "ice cream",
+  "quantity" : 5,
+  "price" : 10.0
+} ]
