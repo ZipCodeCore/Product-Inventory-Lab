@@ -1,0 +1,28 @@
+[ {
+  "id" : 1,
+  "name" : "Step Daddy",
+  "brand" : "NYRP",
+  "sport" : "Casual",
+  "size" : 10.5,
+  "qty" : 39,
+  "price" : 39.99,
+  "totalPrice" : 1559.6101
+}, {
+  "id" : 2,
+  "name" : "Step Momma",
+  "brand" : "NYRP",
+  "sport" : "Casual",
+  "size" : 8.5,
+  "qty" : 28,
+  "price" : 45.99,
+  "totalPrice" : 1287.7201
+}, {
+  "id" : 3,
+  "name" : "Reebles",
+  "brand" : "Yamaha",
+  "sport" : "Standing Still",
+  "size" : 10.5,
+  "qty" : 15,
+  "price" : 34.99,
+  "totalPrice" : 524.85004
+} ]
